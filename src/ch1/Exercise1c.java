@@ -5,7 +5,7 @@ class Exercise1c {
 
         int x = 5;
         while (x > 1) {
-            x = x - 1;
+            x --;
             if (x < 3) {
                 System.out.println("small x");
             }
