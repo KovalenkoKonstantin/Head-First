@@ -13,3 +13,5 @@ Java Leaner's guide
 
 
 | 1 | [Chapter 1. Dive in A Quick Dip: Breaking the Surface](./src/ch1)
+
+| 1 | [Chapter 2. Classes and Objects: A Trip to Objectville](./src/ch2)
