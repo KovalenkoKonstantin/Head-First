@@ -1,11 +1,8 @@
-package ch2;
+package ch2.dog;
 
 class Dog {
-    int size;
-    String breed;
-    String name;
-
-    int times;
+    int size, times ;
+    String breed, name;
 
     String bark() {
         //System.out.println("Ruff! Ruff!");

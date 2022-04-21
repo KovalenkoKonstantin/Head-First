@@ -1,4 +1,4 @@
-package ch2;
+package ch2.dog;
 
 class DogTestDrive {
     public static void main(String[] args) {
