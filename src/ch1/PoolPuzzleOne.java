@@ -32,13 +32,17 @@ public class PoolPuzzleOne {
                 System.out.print(" oyster");//definition
                 x += 2;//definition
             }
+
             if (x == 1) {//static
                 System.out.print("noys");//definition
             }
+
             if (x < 1) {//definition
                 System.out.print("oise");//definition
             }
+
             System.out.println();//static
+
             x++;//definition
         }
     }
