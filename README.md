@@ -14,3 +14,6 @@ This is the sourse code for O'Reilly's Head First
 
  1.  [Chapter 1. Dive in A Quick Dip: Breaking the Surface](./src/ch1)
  2.  [Chapter 2. Classes and Objects: A Trip to Objectville](./src/ch2)
+ 3.  [Chapter 3. Chapter 3. Primitives and References: Know Your Variables](./src/ch3)
+ 4.  [Chapter 4. Methods use Instance Variables: How Objects Behave](.src/ch4)
+ 5.  [Chapter 5. Writing a Program: Extra-Strength Methods](.src/ch5)
