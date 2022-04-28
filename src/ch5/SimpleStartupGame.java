@@ -9,12 +9,12 @@ public class SimpleStartupGame {
         int randomNum = (int) (Math.random() * 5);
 
         int[] locations = {randomNum, randomNum + 1, randomNum + 2};
-        theStartup.setLocationCells(locations);
+        theStartup.setCellsLocation(locations);
         boolean isAlive = true;
 
         while (isAlive) {
             int guess = helper.getUserInput("enter a number");
-            String result = theStartup.checkYourself(guess);
+            String result = theStartup.checkForHits(guess);
             numOfGuesses++;
             if (result.equals("kill")) {
                 isAlive = false;

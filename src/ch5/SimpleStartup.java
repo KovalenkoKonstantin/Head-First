@@ -1,28 +1,30 @@
 package ch5;
 
-
 class SimpleStartup {
-    private int[] locationCells;
-    private int numOfHits = 0;
+    private int[] cellsArray;//an array that holds empty cells
+    private int succesfulHits = 0;//number of successful hits
 
-    public void setLocationCells(int[] locs) {
-        locationCells = locs;
-    }
+    public void setCellsLocation(int[] cellsLocation) {
+        cellsArray = cellsLocation;
+    }//pass an array to the method
 
-    public String checkYourself(int guess) {
+    public String checkForHits(int guess) {
         String result = "miss";
-        for (int cell : locationCells) {
+        if (guess >= cellsArray.length) {
+            //System.out.println("The number shoud be les than " + (cellsArray.length - 1));
+        }
+        for (int cell : cellsArray) {//iterate over the elements in an array or collection
             if (guess == cell) {
                 result = "hit";
-                numOfHits++;
+                succesfulHits++;
                 break;
             } // end if
         } // end for
-        if (numOfHits == locationCells.length) {
+        if (succesfulHits == cellsArray.length) {
             result = "kill";
         } // end if
-        System.out.println(result);
+        //System.out.println(result);
         return result;
-    } // end method
-} // close class
+    } // end checkForHits method
+} // close SimpleStartup class
 
