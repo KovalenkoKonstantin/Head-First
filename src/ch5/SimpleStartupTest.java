@@ -10,13 +10,15 @@ public class SimpleStartupTest {
         simpleStartup.setCellsLocation(cellsLocation);//invoke the setter method on startup
 
         String deliberatelyWrong = simpleStartup.checkForHits(cellsLocation.length * 22);//check for wrong guesses
-        int guess = ThreadLocalRandom.current().nextInt(0, cellsLocation.length);//make a fake user guess
+
+        int guess = ThreadLocalRandom.current().nextInt(cellsLocation[0], cellsLocation.length);//make a fake user guess
+        //System.out.println("Conditional random equals:" + guess);
         String result = simpleStartup.checkForHits(guess);//pass the fake guess
         String testResult = "Test failed";//initialization
-        if (result.equals("hit")) {//condition
+        if (result.equals("hit") && deliberatelyWrong.equals("miss")) {//condition.
+            // Same as &, but if the operand to the left of & is false, this operator returns false without checking the second operand.
             testResult = "Test passed";//change if success
         }
-        //System.out.println("Conditional random equals:" + guess);
         System.out.println(testResult);//show
     }
 }

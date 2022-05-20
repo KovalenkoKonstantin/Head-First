@@ -11,8 +11,9 @@ class SimpleStartup {
     public String checkForHits(int guess) {
         String result = "miss";
         if (guess >= cellsArray.length) {
-            //System.out.println("The number shoud be les than " + (cellsArray.length - 1));
+            //System.out.println("The number should be les than " + (cellsArray.length - 1));
         }
+        else
         for (int cell : cellsArray) {//iterate over the elements in an array or collection
             if (guess == cell) {
                 result = "hit";
