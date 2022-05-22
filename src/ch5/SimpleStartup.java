@@ -10,10 +10,7 @@ class SimpleStartup {
 
     public String checkForHits(int guess) {
         String result = "miss";
-        if (guess >= cellsArray.length) {
-            //System.out.println("The number should be les than " + (cellsArray.length - 1));
-        }
-        else
+
         for (int cell : cellsArray) {//iterate over the elements in an array or collection
             if (guess == cell) {
                 result = "hit";
@@ -24,7 +21,7 @@ class SimpleStartup {
         if (successfulHits == cellsArray.length) {
             result = "kill";
         } // end if
-        //System.out.println(result);
+        System.out.println(result);
         return result;
     } // end checkForHits method
 } // close SimpleStartup class
