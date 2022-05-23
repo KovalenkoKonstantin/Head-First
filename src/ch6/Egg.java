@@ -1,4 +1,4 @@
 package ch6;
 
-public class Egg {
+public class Egg {//used in snippets
 }

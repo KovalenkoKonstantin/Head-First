@@ -4,23 +4,31 @@ import java.util.ArrayList;
 
 public class Snippets {
     void arrayList() {
-        ArrayList<Egg> myList = new ArrayList<Egg>();
+        ArrayList<Egg> myList = new ArrayList<>();
 
         Egg egg1 = new Egg();
-        myList.add(egg1);
+        myList.add(egg1);//Appends the specified element to the end of this list.
 
         Egg egg2 = new Egg();
         myList.add(egg2);
 
-        int theSize = myList.size();
+        int theSize = myList.size();//Returns the number of elements in this list.
 
-        boolean isIn = myList.contains(egg1);
+        boolean isIn = myList.contains(egg1);//Returns true if this list contains the specified element.
+        // More formally, returns true if and only if this list contains at least one element e such that Objects.equals(o, e).
 
-        int idx = myList.indexOf(egg2);
+        int idx = myList.indexOf(egg2);//Returns the index of the first occurrence of the specified element in this list,
+        // or -1 if this list does not contain the element.
+        // More formally, returns the lowest index i such that Objects.equals(o, get(i)), or -1 if there is no such index.
 
-        boolean empty = myList.isEmpty();
+        boolean empty = myList.isEmpty();//Returns true if this list contains no elements.
 
-        myList.remove(egg1);
+        myList.remove(egg1);//Removes the first occurrence of the specified element from this list, if it is present.
+        // If the list does not contain the element, it is unchanged.
+        // More formally, removes the element with the lowest index i such that Objects.equals(o, get(i))
+        // (if such an element exists).
+        // Returns true if this list contained the specified element
+        // (or equivalently, if this list changed as a result of the call).
     }
 
     void andExample(int price, String camera) {

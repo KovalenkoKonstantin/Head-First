@@ -1,10 +1,9 @@
 package ch6;
-
-        import java.util.ArrayList;
+import java.util.ArrayList;
 
 public class SharpenYourPencil {
     void arrayListCode() {
-        ArrayList<String> myList = new ArrayList<String>();
+        ArrayList<String> myList = new ArrayList<>();
 
         String a = "whoohoo";
         myList.add(a);
