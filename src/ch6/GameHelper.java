@@ -6,7 +6,7 @@ public class GameHelper {
     private static final String ALPHABET = "abcdefg";
     private static final int GRID_LENGTH = 7;
     private static final int GRID_SIZE = 49;
-    private static final int MAX_ATTEMPTS = 200;
+    private static final int MAX_ATTEMPTS = GRID_LENGTH*GRID_SIZE;
 
     static final int HORIZONTAL_INCREMENT = 1;          // A better way to represent these two
     static final int VERTICAL_INCREMENT = GRID_LENGTH;  // things is an enum (see Appendix B)
