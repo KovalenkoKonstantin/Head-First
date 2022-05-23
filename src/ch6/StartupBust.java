@@ -26,7 +26,7 @@ public class StartupBust {
 
         for (Startup startup : startups) {
             ArrayList<String> newLocation = helper.placeStartup(3);
-            startup.setLocationCells(newLocation);
+            startup.setCellsLocation(newLocation);
         } // close for loop
     } // close setUpGame method
 
