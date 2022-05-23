@@ -6,7 +6,7 @@ public class SharpenYourPencil {
         ArrayList<String> myList = new ArrayList<>();
 
         String a = "whoohoo";
-        myList.add(a);
+        myList.add( a);
 
         String b = "Frog";
         myList.add(b);
