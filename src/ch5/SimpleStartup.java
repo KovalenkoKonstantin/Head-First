@@ -21,7 +21,7 @@ class SimpleStartup {
         if (successfulHits == cellsArray.length) {
             result = "kill";
         } // end if
-        System.out.println(result);
+        //System.out.println(result);
         return result;
     } // end checkForHits method
 } // close SimpleStartup class

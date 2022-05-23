@@ -23,6 +23,7 @@ public class SimpleStartupGame {
             else if (guess >= randomNum + 3) System.out.println("Selected number is more than the end of the array");
 
             String result = theStartup.checkForHits(guess);
+            System.out.println(result);
             numOfGuesses++;
             if (result.equals("kill")) {
                 isAlive = false;
