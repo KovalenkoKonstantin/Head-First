@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class StartupBust {
 
     private GameHelper helper = new GameHelper();
-    private ArrayList<Startup> startups = new ArrayList<Startup>();
+    private ArrayList<Startup> startups = new ArrayList<>();
     private int numOfGuesses = 0;
 
     private void setUpGame() {
