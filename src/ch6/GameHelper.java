@@ -8,7 +8,7 @@ import java.util.concurrent.ThreadLocalRandom;
 public class GameHelper {
     private static final String ALPHABET = "abcdefg";
     private static final int GRID_LENGTH = 7;
-    private static final int GRID_SIZE = 49;
+    private static final int GRID_SIZE = GRID_LENGTH^2; // square grid
     private static final int MAX_ATTEMPTS = 200;
 
     static final int HORIZONTAL_INCREMENT = 1;          // A better way to represent these two
@@ -19,9 +19,9 @@ public class GameHelper {
 
     private int startupCount = 0;
 
-//    public String getUserInput(String prompt) {
+    //    public String getUserInput(String prompt) {
 //        System.out.print(prompt + ": ");
-    public String getUserInput(){
+    public String getUserInput() {
         System.out.println("Enter a guess: ");
         Scanner scanner = new Scanner(System.in);
         return scanner.nextLine().toLowerCase();
@@ -39,20 +39,21 @@ public class GameHelper {
         while (!success & attempts++ < MAX_ATTEMPTS) {      // main search loop
             int location = ThreadLocalRandom.current().nextInt(GRID_SIZE);  // get random starting point
 
-            for (int i = 0; i < startupCoords.length; i++) {  // create array of proposed coords
-                startupCoords[i] = location;                    // put current location in array
+            //for (int i = 0; i < startupCoords.length; i++) {  // create array of proposed coords
+            for (int startupLocation : startupCoords) {
+                startupCoords[startupLocation] = location;      // put current location in array
                 location += increment;                          // calculate the next location
             }
             System.out.println("Trying: " + Arrays.toString(startupCoords));
 
             if (startupFits(startupCoords, increment)) {      // startup fits on the grid?
-                success = coordsAvailable(startupCoords);       // ...and locations aren't taken?
+                success = coordsAvailable(startupCoords);     // ...and locations aren't taken?
             }                                                 // end loop
-        }                                                   // end while
+        }                                                     // end while
 
         savePositionToGrid(startupCoords);                  // coords passed checks, save
         ArrayList<String> alphaCells = convertCoordsToAlphaFormat(startupCoords);
-        System.out.println("Placed at: "+ alphaCells);
+        System.out.println("Placed at: " + alphaCells);
         return alphaCells;
     } //end placeStartup
 
