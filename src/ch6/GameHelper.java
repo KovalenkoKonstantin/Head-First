@@ -69,9 +69,9 @@ public class GameHelper {
 
     boolean coordsAvailable(@NotNull int[] startupCoords) {
         for (int coord : startupCoords) {                   // check all potential positions
-            if (grid[coord] != 0) {                           // this position already taken
+            if (grid[coord] != 0) {                         // this position already taken
                 System.out.println("position: " + coord + " already taken.");
-                return false;                                   // NO success
+                return false;                               // NO success
             }
         }
         return true;                                        // there were no clashes, yay!
@@ -88,7 +88,7 @@ public class GameHelper {
         ArrayList<String> alphaCells = new ArrayList<>();
         for (int index : startupCoords) {                   // for each grid coordinate
             String alphaCoords = getAlphaCoordsFromIndex(index); // turn it into an "a0" style
-            alphaCells.add(alphaCoords);                      // add to a list
+            alphaCells.add(alphaCoords);                    // add to a list
         }
         return alphaCells;                                  // return the "a0"-style coords
     } // end convertCoordsToAlphaFormat
@@ -107,9 +107,9 @@ public class GameHelper {
 
     private int getIncrement() {
         if (startupCount % 2 == 0) {                        // if EVEN Startup
-            return HORIZONTAL_INCREMENT;                      // place horizontally
+            return HORIZONTAL_INCREMENT;                    // place horizontally
         } else {                                            // else ODD
-            return VERTICAL_INCREMENT;                        // place vertically
+            return VERTICAL_INCREMENT;                      // place vertically
         }
     } //end getIncrement
 } //end class
