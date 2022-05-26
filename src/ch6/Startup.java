@@ -6,13 +6,19 @@ public class Startup {
     private ArrayList<String> cellsLocation;
     private String name;
 
-    public void setCellsLocation(ArrayList<String> loc) {
-        cellsLocation = loc;
+    public void setCellsLocation(ArrayList<String> cellsLocation) {
+        this.cellsLocation = cellsLocation;
     }
+//    public void setCellsLocation(ArrayList<String> loc) {
+//        cellsLocation = loc;
+//    }
+    public void setName(String name) {
+        this.name = name;
+    }
+//    public void setName(String n) {
+//        name = n;
+//    }
 
-    public void setName(String n) {
-        name = n;
-    }
 
     public String checkYourself(String userInput) {
         String result = "miss";
