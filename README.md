@@ -19,3 +19,4 @@ This is the reformatted sourse code for O'Reilly's Head First
  4.  [Chapter 4. Methods use Instance Variables: How Objects Behave](./src/ch4)
  5.  [Chapter 5. Writing a Program: Extra-Strength Methods](./src/ch5)
  6.  [Chapter 6. Get to Know the Java API: Using the Java Library](./src/ch6)
+ 7.  [Chapter 7 . Inheritance and Polymorphism: Better Living in Objectville](./src/ch7)
