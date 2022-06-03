@@ -21,7 +21,7 @@ public class StartupBust {
         startups.add(three);
 
         System.out.println("Your goal is to sink three Startups.");
-        System.out.println("poniez, hacqi, cabista");
+        System.out.println(one.getName() + ", " + two.getName() + ", " + three.getName());
         System.out.println("Try to sink them all in the fewest number of guesses");
 
         for (Startup startup : startups) {
@@ -60,7 +60,7 @@ public class StartupBust {
 
     private void finishGame() {
         System.out.println("All ships are dead! Your stock is now worthless");
-        if (numOfGuesses <= 18) {
+        if (numOfGuesses <= helper.getStatupsize()*5) {
             System.out.println("It only took you " + numOfGuesses + " guesses.");
             System.out.println("You got out before your options sank.");
         } else {

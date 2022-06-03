@@ -8,8 +8,9 @@ import java.util.concurrent.ThreadLocalRandom;
 public class GameHelper {
     private static final String ALPHABET = "abcdefg";
     private static final int GRID_LENGTH = 7;
-    private static final int GRID_SIZE = GRID_LENGTH^2; // square grid
-    private static final int MAX_ATTEMPTS = 200;
+    private static final int GRID_SIZE = (int) Math.pow(GRID_LENGTH, 2); // square grid
+    private static final int MAX_ATTEMPTS = 200;//attempts to place ships on the grid
+    private int statupsize = 0;
 
     static final int HORIZONTAL_INCREMENT = 1;          // A better way to represent these two
     static final int VERTICAL_INCREMENT = GRID_LENGTH;  // things is an enum (see Appendix B)
@@ -18,6 +19,10 @@ public class GameHelper {
     //private final Random random = new Random();
 
     private int startupCount = 0;
+
+    public void gridCheck() {
+        System.out.println(GRID_SIZE);
+    }
 
     //    public String getUserInput(String prompt) {
 //        System.out.print(prompt + ": ");
@@ -28,6 +33,7 @@ public class GameHelper {
     } //end getUserInput
 
     public ArrayList<String> placeStartup(int startupSize) {
+        this.statupsize = startupSize;
         // holds index to grid (0 - 48)
         int[] startupCoords = new int[startupSize];         // current candidate co-ordinates
         int attempts = 0;                                   // current attempts counter
@@ -37,14 +43,13 @@ public class GameHelper {
         int increment = getIncrement();                     // alternate vert & horiz alignment
 
         while (!success & attempts++ < MAX_ATTEMPTS) {      // main search loop
-            int location = ThreadLocalRandom.current().nextInt(GRID_SIZE);  // get random starting point
+            int location = ThreadLocalRandom.current().nextInt(0, GRID_SIZE);  // get random starting point
 
-            //for (int i = 0; i < startupCoords.length; i++) {  // create array of proposed coords
-            for (int startupLocation : startupCoords) {
-                startupCoords[startupLocation] = location;      // put current location in array
+            for (int i = 0; i < startupCoords.length; i++) {    // create array of proposed coords
+                startupCoords[i] = location;                    // put current location in array
                 location += increment;                          // calculate the next location
             }
-            System.out.println("Trying: " + Arrays.toString(startupCoords));
+            //System.out.println("Trying: " + Arrays.toString(startupCoords));
 
             if (startupFits(startupCoords, increment)) {      // startup fits on the grid?
                 success = coordsAvailable(startupCoords);     // ...and locations aren't taken?
@@ -56,6 +61,10 @@ public class GameHelper {
         System.out.println("Placed at: " + alphaCells);
         return alphaCells;
     } //end placeStartup
+
+    public int getStatupsize() {
+        return statupsize;
+    }
 
     boolean startupFits(@NotNull int[] startupCoords, int increment) {
         int finalLocation = startupCoords[startupCoords.length - 1];
@@ -70,7 +79,7 @@ public class GameHelper {
     boolean coordsAvailable(@NotNull int[] startupCoords) {
         for (int coord : startupCoords) {                   // check all potential positions
             if (grid[coord] != 0) {                         // this position already taken
-                System.out.println("position: " + coord + " already taken.");
+                //System.out.println("position: " + coord + " already taken.");
                 return false;                               // NO success
             }
         }

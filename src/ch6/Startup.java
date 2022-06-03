@@ -19,6 +19,9 @@ public class Startup {
 //        name = n;
 //    }
 
+    public String getName() {
+        return name;
+    }
 
     public String checkYourself(String userInput) {
         String result = "miss";
