@@ -1,5 +1,5 @@
 # Head-First
-This is the sourse code for O'Reilly's Head First
+This is the reformatted sourse code for O'Reilly's Head First
 <br/>Java Leaner's guide
 <br/>3rd edition
 <br/>Originaly posted at https://resources.oreilly.com/examples/0636920034452/-/tree/main/
