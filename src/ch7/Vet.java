@@ -1,6 +1,6 @@
 package ch7;
 
-class Vet {
+final class Vet {//final classes cannot be extended
   public void giveShot(Animal a) {
     // do horrible things to the Animal at
     // the other end of the ‘a’ parameter
@@ -8,13 +8,3 @@ class Vet {
   }
 }
 
-
-class PetOwner {
-  public void start() {
-    Vet vet = new Vet();
-    Dog dog = new Dog();
-    Hippo hippo = new Hippo();
-    vet.giveShot(dog);
-    vet.giveShot(hippo);
-  }
-}

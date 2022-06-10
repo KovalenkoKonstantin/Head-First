@@ -10,4 +10,40 @@ public class TestBoats {
     b3.move();
     b2.move();
   }
+
+  public static class Boat {
+
+    private int length;
+
+    public void setLength(int len) {
+      length = len;
+    }
+
+    public int getLength() {
+      return length;
+    }
+
+    public void move() {
+      System.out.print("drift  ");
+    }
+
+  }
+
+  @Subclassed//TODO: write definition to the annotation @Subclassed
+  public static class Rowboat extends Boat {
+    public void rowTheBoat() {
+      System.out.print("stroke natasha");
+    }
+  }
+
+  @Subclassed
+  public static class Sailboat extends Boat {
+
+    @Override
+    public void move() {
+      System.out.print("hoist sail ");
+    }
+  }
 }
+
+

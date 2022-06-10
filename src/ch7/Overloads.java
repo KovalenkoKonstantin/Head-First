@@ -6,7 +6,7 @@ public class Overloads {
   public int addNums(int a, int b) {
     return a + b;
   }
-
+  @Overload//TODO: rewrite/declare/define annotation
   public double addNums(double a, double b) {
     return a + b;
   }
@@ -15,7 +15,7 @@ public class Overloads {
     // lots of validation code, and then:
     uniqueID = theID;
   }
-
+  @Overload
   public void setUniqueID(int ssNumber) {
     String numString = "" + ssNumber;
     setUniqueID(numString);

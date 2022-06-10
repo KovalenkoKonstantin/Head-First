@@ -8,6 +8,12 @@ public class Dog extends Animal {
     }
 
     @Override
+    public void makeNoise() {
+        super.makeNoise();
+        System.out.println("iuiuiu");
+    }
+
+    @Override
     public void roam() {
         super.roam();
         System.out.println("wof-wof");
