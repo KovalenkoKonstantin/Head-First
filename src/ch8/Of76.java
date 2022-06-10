@@ -1,33 +1,16 @@
 package ch8;
 
+import java.util.ArrayList;
+
 public class Of76 extends Clowns {
   public static void main(String[] args) {
-    Nose[] i = new Nose[3];
-    i[0] = new Acts();
-    i[1] = new Clowns();
-    i[2] = new Of76();
-    for (int x = 0; x < 3; x++) {
-      System.out.println(i[x].iMethod()
-                         + " " + i[x].getClass());
+    ArrayList <Nose> i = new ArrayList<>();
+    i.add(new Acts());
+    i.add(new Clowns());
+    i.add(new Of76());
+    for (int x = 0; x < i.size(); x++) {
+      System.out.println(i.get(x).iMethod()
+                         + " " + i.get(x).getClass());
     }
-  }
-}
-
-interface Nose {
-  public int iMethod();
-}
-
-abstract class Picasso implements Nose {
-  public int iMethod() {
-    return 7;
-  }
-}
-
-class Clowns extends Picasso {
-}
-
-class Acts extends Picasso {
-  public int iMethod() {
-    return 5;
   }
 }
