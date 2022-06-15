@@ -1,5 +1,5 @@
 package ch8;
 
 interface Nose {
-    public int iMethod();
+    abstract public int iMethod();
 }

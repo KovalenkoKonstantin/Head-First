@@ -14,6 +14,11 @@ public class Hippo extends Animal {
     }
 
     @Override
+    public void stinks() {
+
+    }
+
+    @Override
     public void roam() {
         super.roam();
         System.out.println("Fffrow-Fffrow");

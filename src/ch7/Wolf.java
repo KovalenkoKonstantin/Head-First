@@ -4,6 +4,12 @@ public class Wolf extends Animal {
   public void makeNoise() {
 
   }
+
+  @Override
+  public void stinks() {
+
+  }
+
   @Override
   public void roam() {
     super.roam();

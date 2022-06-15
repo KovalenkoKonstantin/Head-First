@@ -12,4 +12,9 @@ public class Lion extends Animal {
         super.roam();
         System.out.println("Grrrr-Grrrr");
     }
+
+    @Override
+    public void stinks() {
+
+    }
 }

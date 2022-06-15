@@ -1,6 +1,6 @@
 package ch7;
 
-public abstract class Animal {
+abstract public class Animal {
   public void eat(){
 
   }
@@ -10,6 +10,7 @@ public abstract class Animal {
   }
 
   public void makeNoise() {
-
   }
+
+  abstract public void  stinks ();
 }

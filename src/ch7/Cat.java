@@ -12,4 +12,9 @@ public class Cat extends Animal {
         super.roam();
         System.out.println("miau");
     }
+
+    @Override
+    public void stinks() {
+
+    }
 }
