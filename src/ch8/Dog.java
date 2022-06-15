@@ -18,4 +18,7 @@ public class Dog extends Canine implements Pet {
   public void eat() {
 
   }
+  public static void anotherCuteEyes(){
+    System.out.println("Blink with dog eyes");
+  }
 }

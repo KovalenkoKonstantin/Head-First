@@ -11,6 +11,8 @@ public class AnimalTestDrive {
     list.add(cat);
 
     dog.play();
+    Dog.anotherCuteEyes();
+    Pet.cuteEyes();
   }
 }
   
