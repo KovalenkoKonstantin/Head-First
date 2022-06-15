@@ -2,5 +2,7 @@ package ch8;
 
 public interface Pet {
   public abstract void beFriendly();
-  public abstract void play();
+  default void play(){
+    System.out.println("Play stuff");
+  };
 }

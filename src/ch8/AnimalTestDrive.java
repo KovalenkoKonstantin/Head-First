@@ -1,7 +1,6 @@
 package ch8;
 
 import ch7.Cat;
-import ch7.Dog;
 
 public class AnimalTestDrive {
   public static void main(String[] args) {
@@ -10,6 +9,8 @@ public class AnimalTestDrive {
     Cat cat = new Cat();
     list.add(dog);
     list.add(cat);
+
+    dog.play();
   }
 }
   

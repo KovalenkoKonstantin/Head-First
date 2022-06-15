@@ -13,14 +13,3 @@ public class Snippets {
   }
 }
 
-class BadDog {
-  public void go() {
-    Dog aDog = new Dog();
-    // doesn't compile
-//    Dog sameDog = getObject(aDog);
-  }
-
-  public Object getObject(Object o) {
-    return o;
-  }
-}

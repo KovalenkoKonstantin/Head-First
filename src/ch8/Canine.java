@@ -1,4 +1,6 @@
 package ch8;
 
-public class Canine {
+import ch7.Animal;
+
+abstract public class Canine extends Animal {
 }

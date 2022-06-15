@@ -1,7 +1,7 @@
 package ch7;
 
-public class Animal {
-  public void eat() {
+public abstract class Animal {
+  public void eat(){
 
   }
 
