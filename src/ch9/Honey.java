@@ -1,22 +1,5 @@
 package ch9;
 
-class Bees {
-  Honey[] beeHoney;
-}
-
-class Raccoon {
-  Kit rk;
-  Honey rh;
-}
-
-class Kit {
-  Honey honey;
-}
-
-class Bear {
-  Honey hunny;
-}
-
 public class Honey {
   public static void main(String[] args) {
     Honey honeyPot = new Honey();

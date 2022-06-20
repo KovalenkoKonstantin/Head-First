@@ -1,17 +1,22 @@
 package ch9;
 
+import ch7.Overload;
+
 public class Duck {
   int size;
 
-  public Duck() {
+  @Constructor
+  public Duck() {//default constructor
   }
 
-  public Duck(int duckSize) {
+  @Overload
+  @Constructor
+  public Duck(int duckSizeInPounds) {
     System.out.println("Quack");
 
-    size = duckSize;
+    size = duckSizeInPounds;
 
-    System.out.println("size is " + size);
+    System.out.println("This duck's size is " + size + " grands");
   }
 }
 
