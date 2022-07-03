@@ -19,11 +19,11 @@ class SonOfBoo extends Boo {
         super(42);
     }
 
-//  public SonOfBoo(int i, String s) {
+//  public SonOfBoo(int i, String s) {//There is no default constructor available in 'ch9.Boo'
 //  }
 
 //  public SonOfBoo(String a, String b, String c) {
-//    super(a, b);
+//    super(a, b);//Required type: int   Provided: String
 //  }
     @Constructor
     @Overload
