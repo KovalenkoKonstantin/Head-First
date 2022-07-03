@@ -18,6 +18,14 @@ public class Duck {
 
     System.out.println("This duck's size is " + size + " grands");
   }
+
+  public void setSize(int size) {
+    this.size = size;
+  }
+
+  public int getSize() {
+    return size;
+  }
 }
 
 // terrible way to provide a default value:
