@@ -13,8 +13,3 @@ public class Song {
   }
 }
 
-class SoundPlayer {
-  public void playSound(String title) {
-
-  }
-}
